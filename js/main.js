@@ -5,6 +5,14 @@ const navLinks = document.querySelector('.nav-links');
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     hamburger.classList.toggle('active');
+    if (window.innerWidth <= 768) {
+        const dropdowns = document.querySelectorAll('.dropdown');
+        if (navLinks.classList.contains('active')) {
+            dropdowns.forEach(d => d.classList.add('open'));
+        } else {
+            dropdowns.forEach(d => d.classList.remove('open'));
+        }
+    }
 });
 
 // Close mobile menu when clicking outside
@@ -12,6 +20,10 @@ document.addEventListener('click', (e) => {
     if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
         navLinks.classList.remove('active');
         hamburger.classList.remove('active');
+        if (window.innerWidth <= 768) {
+            const dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(d => d.classList.remove('open'));
+        }
     }
 });
 
@@ -28,6 +40,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             // Close mobile menu after clicking a link
             navLinks.classList.remove('active');
             hamburger.classList.remove('active');
+            if (window.innerWidth <= 768) {
+                const dropdowns = document.querySelectorAll('.dropdown');
+                dropdowns.forEach(d => d.classList.remove('open'));
+            }
         }
     });
 });
