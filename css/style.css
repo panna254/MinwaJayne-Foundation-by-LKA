@@ -142,19 +142,19 @@ h1, h2, h3, h4, h5, h6, .about .card h3, .pillar-text h3, .involved-text h3, .bl
 
 /* Section Styles */
 section {
-    padding: 5rem 5%;
+    padding: 2.5rem 5%;
     scroll-margin-top: 120px;
 }
 
 h2 {
     font-size: 1.8rem;
     color: var(--primary-pink);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-align: center;
     position: relative;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
 }
 
 h2::after {
@@ -176,7 +176,7 @@ h1 {
 .card {
     background-color: var(--white);
     border-radius: 10px;
-    padding: 2rem;
+    padding: 1.2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     border: 1px solid var(--light-pink);
@@ -190,13 +190,14 @@ h1 {
 
 .card h3 {
     color: var(--dark-pink);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-size: 1.1rem;
 }
 
 .card p {
     font-size: 0.85rem;
     line-height: 1.5;
+    margin-bottom: 0.5rem;
 }
 
 .card i {
@@ -240,19 +241,22 @@ h1 {
 /* Grid Layouts */
 .grid {
     display: grid;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .grid-2 {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 }
 
 .grid-3 {
     grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
 }
 
 .grid-4 {
     grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
 }
 
 /* Responsive Design */
@@ -439,7 +443,7 @@ h1 {
     }
     
     section {
-        padding: 3rem 5%;
+        padding: 1.5rem 5%;
     }
     
     h2 {
@@ -583,7 +587,7 @@ h1 {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.7rem;
 }
 
 .footer-logo .logo-img {
@@ -607,7 +611,7 @@ h1 {
 
 .footer-section h4 {
     color: var(--primary-pink);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-size: 0.95rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -616,7 +620,7 @@ h1 {
 .footer-section p {
     font-size: 0.8rem;
     line-height: 1.5;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .footer-links {
@@ -1093,8 +1097,8 @@ h1 {
 }
 
 .pillar-section {
-    margin-bottom: 60px;
-    padding: 40px 0;
+    margin-bottom: 30px;
+    padding: 20px 0;
     border-bottom: 1px solid #eee;
 }
 
@@ -1105,7 +1109,7 @@ h1 {
 .pillar-content {
     display: flex;
     align-items: flex-start;
-    gap: 40px;
+    gap: 1.2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -1183,7 +1187,7 @@ h1 {
 }
 
 .pillar-text p {
-    margin-bottom: 20px;
+    margin-bottom: 0.7rem;
     line-height: 1.6;
     color: #333;
 }
@@ -1250,8 +1254,8 @@ h1 {
 }
 
 .involved-section {
-    margin-bottom: 60px;
-    padding: 40px 0;
+    margin-bottom: 30px;
+    padding: 20px 0;
     border-bottom: 1px solid #eee;
     scroll-margin-top: 120px;
 }
@@ -1283,7 +1287,7 @@ h1 {
 }
 
 .involved-text p {
-    margin-bottom: 20px;
+    margin-bottom: 0.7rem;
     line-height: 1.6;
     color: #333;
 }
@@ -1348,7 +1352,8 @@ h1 {
 
 @media (max-width: 768px) {
     .involved-section {
-        padding: 30px 0;
+        padding: 15px 0;
+        margin-bottom: 18px;
     }
 
     .involved-text h3 {
@@ -1404,8 +1409,8 @@ h1 {
 .blog-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin: 2rem 0;
+    gap: 1rem;
+    margin: 1rem 0;
 }
 
 .blog-card {
@@ -1445,7 +1450,7 @@ h1 {
 .blog-content p {
     color: var(--dark-gray);
     font-size: 0.98rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.7rem;
 }
 
 .gallery-grid {
@@ -1531,7 +1536,7 @@ h1 {
 .success-stories-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+    gap: 1rem;
     margin: 1rem 0;
     padding: 0;
 }
@@ -1539,7 +1544,7 @@ h1 {
 .impact-metrics {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    gap: 1rem;
     margin: 1rem 0;
     text-align: center;
 }
@@ -1896,4 +1901,16 @@ h1 {
 .footer, .footer-section {
   background: var(--black) !important;
   color: var(--white) !important;
+}
+
+.about, .meet-founder, .pillars, .involved, .donate-section, .infohub-section, .contact {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+}
+
+@media (max-width: 480px) {
+    .about, .meet-founder, .pillars, .involved, .donate-section, .infohub-section, .contact {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
 }
